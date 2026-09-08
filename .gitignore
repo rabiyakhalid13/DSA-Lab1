@@ -30,3 +30,4 @@
 *.exe
 *.out
 *.app
+# Visual Studio & C++ artifacts
