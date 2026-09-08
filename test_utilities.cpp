@@ -49,5 +49,24 @@ int main() {
     auto t5 = generatePascalsTriangle(5);
     vector<int> expectedRow5 = {1, 4, 6, 4, 1};
     cout << "n=5 Row 5 verification: " << (t5[4] == expectedRow5 ? "PASS" : "FAIL") << endl;    
+
+    
+    // Task 6 Tests
+    cout << "\nTask 6: Mode" << endl;
+    cout << "Unique Mode: " << (findMode({1, 2, 2, 3}) == vector<int>{2} ? "PASS" : "FAIL") << endl;
+    cout << "Multiple Modes: " << (findMode({1, 1, 2, 2}) == vector<int>{1, 2} ? "PASS" : "FAIL") << endl;
+    cout << "Empty Array: " << (findMode({}).empty() ? "PASS" : "FAIL") << endl;
+
+    // Task 7 Tests
+    cout << "\nTask 7: Strassen Matrix Multiplication" << endl;
+    Matrix A2 = {{1, 2}, {3, 4}};
+    Matrix B2 = {{5, 6}, {7, 8}};
+    cout << "2x2 Strassen Match: " << (strassenMultiply(A2, B2) == standardMultiply(A2, B2) ? "PASS" : "FAIL") << endl;
+
+    Matrix A4 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+    Matrix B4 = {{16, 15, 14, 13}, {12, 11, 10, 9}, {8, 7, 6, 5}, {4, 3, 2, 1}};
+    cout << "4x4 Strassen Match: " << (strassenMultiply(A4, B4) == standardMultiply(A4, B4) ? "PASS" : "FAIL") << endl;
     return 0;
 }
+
+
