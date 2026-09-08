@@ -14,10 +14,8 @@ std::vector<std::vector<int>> generatePascalsTriangle(int n);
 
 #include <vector>
 
-// Task 6
 std::vector<int> findMode(const std::vector<int>& arr);
 
-// Task 7
 typedef std::vector<std::vector<int>> Matrix;
 Matrix standardMultiply(const Matrix& A, const Matrix& B);
 Matrix strassenMultiply(const Matrix& A, const Matrix& B);
