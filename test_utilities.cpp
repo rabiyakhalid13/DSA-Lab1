@@ -31,5 +31,23 @@ int main() {
     printVector(res3);
     cout << endl;
 
+    // Task 4 Tests
+    cout << "Task 4: Pattern Search" << endl;
+    cout << "Beginning: " << (naivePatternSearch("hello world", "hello") == 0 ? "PASS" : "FAIL") << endl;
+    cout << "End: " << (naivePatternSearch("hello world", "world") == 6 ? "PASS" : "FAIL") << endl;
+    cout << "Not Present: " << (naivePatternSearch("hello world", "cpp") == -1 ? "PASS" : "FAIL") << endl;
+    cout << "Empty Pattern: " << (naivePatternSearch("hello world", "") == 0 ? "PASS" : "FAIL") << endl;    
+
+    // Task 5 Tests
+    cout << "\nTask 5: Pascal's Triangle" << endl;
+    auto t0 = generatePascalsTriangle(0);
+    cout << "n=0 size: " << (t0.empty() ? "PASS" : "FAIL") << endl;
+
+    auto t1 = generatePascalsTriangle(1);
+    cout << "n=1 size: " << (t1.size() == 1 ? "PASS" : "FAIL") << endl;
+
+    auto t5 = generatePascalsTriangle(5);
+    vector<int> expectedRow5 = {1, 4, 6, 4, 1};
+    cout << "n=5 Row 5 verification: " << (t5[4] == expectedRow5 ? "PASS" : "FAIL") << endl;    
     return 0;
 }

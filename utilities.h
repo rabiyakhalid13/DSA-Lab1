@@ -6,4 +6,10 @@
 int add(int a, int b);
 std::vector<int> findAllIndices(const std::vector<int>& arr, int key);
 
+#include <string>
+int naivePatternSearch(const std::string& text, const std::string& pattern);
+
+#include <vector>
+std::vector<std::vector<int>> generatePascalsTriangle(int n);
+
 #endif
